@@ -440,17 +440,17 @@ window.PORTFOLIO_DATA = {
           "date": "2026-11-07",
           "timestamp": 1794077678000
         },
-        {
-          "id": "curis-8",
-          "title": "Unawea",
-          "filename": "unawea.jpg",
-          "src": "curis/unawea.jpg",
-          "type": "curis",
-          "mediaType": "image",
-          "size": "0.57 MB",
-          "date": "2026-11-07",
-          "timestamp": 1794072461000
-        },
+        // {
+        //   "id": "curis-8",
+        //   "title": "Unawea",
+        //   "filename": "unawea.jpg",
+        //   "src": "curis/unawea.jpg",
+        //   "type": "curis",
+        //   "mediaType": "image",
+        //   "size": "0.57 MB",
+        //   "date": "2026-11-07",
+        //   "timestamp": 1794072461000
+        // },
         {
           "id": "curis-9",
           "title": "A",
