@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADEXx — Archivo de Arte [Editorial Carmesí]</title>
+  <meta name="description" content="Archivo de arte monográfico de ADEXx: Pixel Art, Curis y Video Edits con estética minimalista editorial en blanco y carmesí.">
+
+  <!-- Fonts: Plus Jakarta Sans + Newsreader + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery-theme">
+  <!-- Glowing Ambient Mesh & Texture Overlay -->
+  <div class="bg-gradient-glows" aria-hidden="true"></div>
+  <div class="bg-paper-overlay" aria-hidden="true"></div>
+
+  <!-- Main Navigation Header (Clean Minimalist, No Buttons) -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="brand-block">
+        <a href="#" class="brand-link">
+          <span class="brand-monogram">AX</span>
+          <div class="brand-titles">
+            <h1 class="brand-name">ADEXx</h1>
+            <span class="brand-curation">ARCHIVO DE ARTE</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="header-status">
+        <span class="gallery-dot"></span>
+        <span class="status-label">@Adexcool155</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Introduction Banner (Editorial Art Style) -->
+  <section class="hero-section">
+    <div class="hero-frame">
+      <div class="corner corner-tl">+</div>
+      <div class="corner corner-tr">+</div>
+      <div class="corner corner-bl">+</div>
+      <div class="corner corner-br">+</div>
+
+      <div class="hero-content">
+        <div class="hero-meta">
+          <span class="hero-badge">uwu</span>
+          <span class="hero-artist">ADEXx &bull; 2026</span>
+        </div>
+        
+        <h2 class="hero-headline">
+          Hola buenas, este es el archivo de mi arte :3
+        </h2>
+        
+        <p class="hero-desc">
+          Aquí estaré subiendo todas mis weas para respaldarlas. Muchas gracias por ver y apoyar, se les quiere :3
+        </p>
+
+        <!-- Stats Counter Ribbon -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-val" id="statTotalItems">78</span>
+            <span class="metric-label">ARTE EN TOTAL</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val" id="statPixels">30</span>
+            <span class="metric-label">PIXEL SPRITES</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val" id="statCuris">22</span>
+            <span class="metric-label">CURIS</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val" id="statEdits">26</span>
+            <span class="metric-label">VIDEO EDITS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Controls Bar: Search and Filters Only -->
+  <div class="controls-bar-wrapper">
+    <div class="controls-bar">
+      <div class="search-box">
+        <span class="search-icon">⚲</span>
+        <input type="text" id="searchInput" placeholder="Buscar por título o nombre de archivo..." autocomplete="off">
+        <button id="clearSearchBtn" class="clear-btn" style="display:none;">✕</button>
+      </div>
+
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">TODAS [<span id="countFilterAll">78</span>]</button>
+        <button class="filter-pill" data-filter="pixelart">01. PIXEL ART [<span id="countFilterPixel">30</span>]</button>
+        <button class="filter-pill" data-filter="curis">02. CURIS [<span id="countFilterCuris">22</span>]</button>
+        <button class="filter-pill" data-filter="edits">03. EDITS [<span id="countFilterEdits">26</span>]</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Showcase Container -->
+  <main class="main-content" id="portfolioRoot">
+
+    <!-- SECCIÓN 1: PIXEL ART -->
+    <section class="art-section" id="pixelart" data-section="pixelart">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-idx">01</span>
+          <div class="section-titles">
+            <h2 class="section-title">PIXEL ART</h2>
+            <span class="section-tag">Sprites &bull; Personajes originales (OCs) &bull; Pixel-Perfect</span>
+          </div>
+        </div>
+        <div class="section-meta">
+          <span class="meta-counter" id="metaCountPixel">30 Obras</span>
+          <span class="meta-sub">Renderizado de alta precisión</span>
+        </div>
+      </div>
+      <p class="section-desc">Sprites de personajes, OCs, avatares y composiciones en resolución pura con paletas controladas.</p>
+      
+      <div class="gallery-grid square-mode pixelart-grid" id="gridPixelart">
+        <!-- Render dinámico -->
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: CURIS -->
+    <section class="art-section" id="curis" data-section="curis">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-idx">02</span>
+          <div class="section-titles">
+            <h2 class="section-title">CURIS</h2>
+            <span class="section-tag">Ilustraciones &bull; Curis &bull; Gráfica digital</span>
+          </div>
+        </div>
+        <div class="section-meta">
+          <span class="meta-counter" id="metaCountCuris">22 Obras</span>
+          <span class="meta-sub">Expresión libre &amp; memes visuales</span>
+        </div>
+      </div>
+      <p class="section-desc">Piezas ilustradas, curis estilizados, collages y dibujos digitales experimentales.</p>
+      
+      <div class="gallery-grid square-mode curis-grid" id="gridCuris">
+        <!-- Render dinámico -->
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: EDITS -->
+    <section class="art-section" id="edits" data-section="edits">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-idx">03</span>
+          <div class="section-titles">
+            <h2 class="section-title">EDITS</h2>
+            <span class="section-tag">Producción de video &bull; Clips &bull; Formato vertical</span>
+          </div>
+        </div>
+        <div class="section-meta">
+          <span class="meta-counter" id="metaCountEdits">26 Obras</span>
+          <span class="meta-sub">Sincronización rítmica &amp; cortes</span>
+        </div>
+      </div>
+      <p class="section-desc">Ediciones audiovisuales dinámicas, sincronizaciones de audio y montajes cinemáticos.</p>
+      
+      <div class="gallery-grid square-mode edits-grid" id="gridEdits">
+        <!-- Render dinámico con video diferido -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">ADEXx &bull; ARCHIVO PERSONAL</div>
+        <p class="footer-caption">Diseño minimalista editorial &bull; Paleta blanca y carmesí &bull; Geometría cuadrada</p>
+      </div>
+      <div class="footer-right">
+        <button class="footer-btn" id="footerScrollTop">↑ SUBIR AL INICIO</button>
+        <button class="footer-btn primary-footer-btn" id="footerOpenData">[+] GESTOR DE DATOS</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX / MEDIA MODAL (Editorial Light Art Style) -->
+  <div class="modal-overlay" id="lightboxModal" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <span class="modal-category" id="modalCategory">[CATEGORÍA]</span>
+          <h3 class="modal-title" id="modalTitle">Título de la Obra</h3>
+        </div>
+        <div class="modal-controls">
+          <button class="modal-btn" id="modalTogglePixel" title="Alternar modo pixelado">[PX: ON]</button>
+          <a class="modal-btn" id="modalDownloadBtn" download title="Descargar archivo original">[DESCARGAR]</a>
+          <button class="modal-btn close-btn" id="modalCloseBtn" title="Cerrar visor (Esc)">✕ CERRAR</button>
+        </div>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <div class="media-stage" id="mediaStage">
+          <!-- Imagen o Video inyectado -->
+        </div>
+
+        <button class="modal-nav prev-nav" id="modalPrev" title="Anterior (←)">‹</button>
+        <button class="modal-nav next-nav" id="modalNext" title="Siguiente (→)">›</button>
+      </div>
+
+      <div class="modal-footer">
+        <div class="meta-item">
+          <span class="meta-key">ARCHIVO:</span>
+          <span class="meta-val" id="modalFilename">-</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-key">PESO:</span>
+          <span class="meta-val" id="modalSize">-</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-key">FECHA:</span>
+          <span class="meta-val" id="modalDate">-</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-key">CATÁLOGO:</span>
+          <span class="meta-val" id="modalIndex">- / -</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEJORA: DATA MANAGER MODAL (GESTOR Y CARGADOR DE DATOS) -->
+  <div class="modal-overlay" id="dataManagerModal" aria-hidden="true">
+    <div class="modal-container data-manager-container">
+      <div class="modal-header">
+        <div class="modal-title-box">
+          <span class="modal-category">[CATÁLOGO]</span>
+          <h3 class="modal-title">Gestor y Cargador de Obras</h3>
+        </div>
+        <div class="modal-controls">
+          <button class="modal-btn close-btn" id="dataManagerCloseBtn">✕ CERRAR</button>
+        </div>
+      </div>
+
+      <div class="data-manager-tabs">
+        <button class="tab-btn active" data-tab="tab-upload">1. Cargar Nuevas Obras</button>
+        <button class="tab-btn" data-tab="tab-json">2. Respaldo / Editor JSON</button>
+        <button class="tab-btn" data-tab="tab-manage">3. Administrar Catálogo</button>
+      </div>
+
+      <div class="data-manager-content">
+        <!-- TAB 1: ADD NEW ITEMS (DRAG & DROP / MANUAL) -->
+        <div class="tab-pane active" id="tab-upload">
+          <div class="upload-dropzone" id="dropzone">
+            <div class="dropzone-icon">⬚</div>
+            <div class="dropzone-text">Arrastra aquí tus archivos de arte (PNG, JPG, MP4)</div>
+            <div class="dropzone-sub">O haz clic para seleccionarlos desde tu computadora</div>
+            <input type="file" id="filePickerInput" multiple accept="image/*,video/*" style="display:none;">
+            <button class="square-btn mt-2" id="triggerFilePicker">SELECCIONAR ARCHIVOS LOCALES</button>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="newCategory">ASIGNAR A CATEGORÍA:</label>
+              <select id="newCategory" class="square-input">
+                <option value="pixelart">01. PIXEL ART</option>
+                <option value="curis">02. CURIS</option>
+                <option value="edits">03. EDITS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="newTitle">TÍTULO (Opcional):</label>
+              <input type="text" id="newTitle" class="square-input" placeholder="Nombre personalizado de la obra...">
+            </div>
+            <div class="form-group full-width">
+              <label for="newCustomPath">O AGREGAR POR RUTA LOCAL / URL DIRECTA:</label>
+              <div class="input-with-button">
+                <input type="text" id="newCustomPath" class="square-input" placeholder="pixelart/nueva_obra.png o https://...">
+                <button class="square-btn" id="btnAddCustomItem">[+] AÑADIR AL CATÁLOGO</button>
+              </div>
+            </div>
+          </div>
+          <div id="uploadFeedback" class="status-msg"></div>
+        </div>
+
+        <!-- TAB 2: JSON IMPORT/EXPORT -->
+        <div class="tab-pane" id="tab-json">
+          <div class="json-intro">
+            <p>Puedes exportar tu catálogo actual en <code>data.json</code>, copiarlo o pegar un JSON modificado para actualizar la galería de inmediato.</p>
+          </div>
+          <div class="json-actions">
+            <button class="square-btn" id="btnExportJSON">📥 DESCARGAR DATA.JSON</button>
+            <button class="square-btn" id="btnCopyJSON">📋 COPIAR JSON AL PORTAPAPELES</button>
+            <button class="square-btn" id="btnApplyJSON">⚡ APLICAR CAMBIOS</button>
+            <button class="square-btn btn-danger" id="btnResetData">↺ RESTAURAR ORIGINALES</button>
+          </div>
+          <textarea id="jsonEditorArea" class="square-textarea" spellcheck="false" placeholder="Cargando estructura JSON..."></textarea>
+        </div>
+
+        <!-- TAB 3: CURRENT ITEMS MANAGER -->
+        <div class="tab-pane" id="tab-manage">
+          <div class="manage-header-stats">
+            <span>OBRAS ACTIVAS: <strong id="manageTotalCount">0</strong></span>
+            <span class="manage-info">Administra, visualiza o retira piezas del catálogo en tiempo real</span>
+          </div>
+          <div class="manage-items-list" id="manageItemsList">
+            <!-- Listado dinámico -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer data-manager-footer">
+        <span class="tech-text">AUTO-GUARDADO LOCAL ACTIVO</span>
+        <button class="square-btn" id="dataManagerDoneBtn">LISTO, VER CAMBIOS</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
