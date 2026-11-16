@@ -103,7 +103,11 @@
 
     // Misc
     toastContainer: document.getElementById('toastContainer'),
-    footerScrollTop: document.getElementById('footerScrollTop')
+    footerScrollTop: document.getElementById('footerScrollTop'),
+
+    // NSFW Warning Modal
+    nsfwModal: document.getElementById('nsfwModal'),
+    nsfwConfirmBtn: document.getElementById('nsfwConfirmBtn')
   };
 
   /**
@@ -115,6 +119,7 @@
     applyPixelPerfectClass();
     renderAll();
     setupEventListeners();
+    openNsfwModal();
   }
 
   /**
@@ -424,6 +429,23 @@
     if (currentLightboxList.length <= 1) return;
     currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxList.length;
     renderLightboxContent();
+  }
+
+  /**
+   * NSFW CONTENT WARNING MODAL (ALERTA AL ENTRAR)
+   */
+  function openNsfwModal() {
+    if (!elements.nsfwModal) return;
+    elements.nsfwModal.classList.add('active');
+    elements.nsfwModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeNsfwModal() {
+    if (!elements.nsfwModal) return;
+    elements.nsfwModal.classList.remove('active');
+    elements.nsfwModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
   /**
@@ -741,6 +763,11 @@
       });
     }
 
+    // NSFW Warning Modal
+    if (elements.nsfwConfirmBtn) {
+      elements.nsfwConfirmBtn.addEventListener('click', closeNsfwModal);
+    }
+
     // Data Manager Modals
     if (elements.openDataManagerBtn) {
       elements.openDataManagerBtn.addEventListener('click', () => openDataManager('tab-upload'));
@@ -901,6 +928,11 @@
 
     // Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
+      // If NSFW warning modal active
+      if (elements.nsfwModal && elements.nsfwModal.classList.contains('active')) {
+        if (e.key === 'Escape') closeNsfwModal();
+      }
+
       // If modal active
       if (elements.lightboxModal && elements.lightboxModal.classList.contains('active')) {
         if (e.key === 'Escape') closeLightbox();

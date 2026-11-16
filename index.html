@@ -322,6 +322,26 @@
     </div>
   </div>
 
+  <!-- NSFW CONTENT WARNING MODAL (ALERTA AL ENTRAR) -->
+  <div class="modal-overlay" id="nsfwModal" aria-hidden="true" role="alertdialog" aria-labelledby="nsfwTitle">
+    <div class="modal-container nsfw-modal-container">
+      <div class="nsfw-warning-strip">
+        <span class="nsfw-strip-icon">⚠</span>
+        <span class="nsfw-strip-text">ADVERTENCIA DE CONTENIDO</span>
+      </div>
+      <div class="nsfw-body">
+        <h3 class="nsfw-title" id="nsfwTitle">Contenido NSFW</h3>
+        <p class="nsfw-text">
+          Este archivo puede contener arte de carácter <strong>NSFW</strong> (no apto para todo público).
+          Al continuar, confirmas que eres mayor de edad y aceptas ver este tipo de contenido.
+        </p>
+        <div class="nsfw-actions">
+          <button class="square-btn nsfw-confirm-btn" id="nsfwConfirmBtn">ENTENDIDO, ENTRAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Container -->
   <div class="toast-container" id="toastContainer"></div>
 
