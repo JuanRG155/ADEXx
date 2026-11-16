@@ -16,6 +16,7 @@
   let searchTerm = '';
   let isSquareMode = true;
   let isPixelPerfect = true; // default true for crisp pixel art
+  let currentTheme = localStorage.getItem('ADEXX_THEME') || 'light';
 
   // Lightbox State
   let currentLightboxList = [];
@@ -23,6 +24,11 @@
 
   // DOM Elements
   const elements = {
+    // Theme Toggle
+    themeToggleBtn: document.getElementById('themeToggleBtn'),
+    themeIcon: document.getElementById('themeIcon'),
+    themeText: document.getElementById('themeText'),
+
     // Badges & Counters
     badgePixelart: document.getElementById('badgePixelart'),
     badgeCuris: document.getElementById('badgeCuris'),
@@ -104,6 +110,7 @@
    * INIT: Cargar datos con soporte para LocalStorage y fallback
    */
   async function init() {
+    applyTheme(currentTheme);
     loadData();
     applyPixelPerfectClass();
     renderAll();
@@ -624,9 +631,43 @@
   }
 
   /**
+   * Control de Tema Claro / Oscuro (Por defecto: Claro)
+   */
+  function applyTheme(theme) {
+    currentTheme = theme;
+    if (theme === 'dark') {
+      document.body.classList.add('theme-dark');
+      if (elements.themeIcon) elements.themeIcon.textContent = '☀';
+      if (elements.themeText) elements.themeText.textContent = 'CLARO';
+      if (elements.themeToggleBtn) elements.themeToggleBtn.setAttribute('title', 'Cambiar a Modo Claro');
+    } else {
+      document.body.classList.remove('theme-dark');
+      if (elements.themeIcon) elements.themeIcon.textContent = '☾';
+      if (elements.themeText) elements.themeText.textContent = 'OSCURO';
+      if (elements.themeToggleBtn) elements.themeToggleBtn.setAttribute('title', 'Cambiar a Modo Oscuro');
+    }
+    try {
+      localStorage.setItem('ADEXX_THEME', theme);
+    } catch (e) {
+      console.warn('No se pudo guardar tema en localStorage:', e);
+    }
+  }
+
+  function toggleTheme() {
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    showToast(`Tema cambiado a MODO ${nextTheme === 'dark' ? 'OSCURO' : 'CLARO'}`);
+  }
+
+  /**
    * Setup Event Listeners
    */
   function setupEventListeners() {
+    // Theme Toggle
+    if (elements.themeToggleBtn) {
+      elements.themeToggleBtn.addEventListener('click', toggleTheme);
+    }
+
     // Search Filter
     if (elements.searchInput) {
       elements.searchInput.addEventListener('input', (e) => {
