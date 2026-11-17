@@ -361,7 +361,7 @@ window.PORTFOLIO_DATA = {
       "id": "curis",
       "title": "02 / CURIS",
       "subtitle": "Ilustraciones, curis, memes visuales y experimentos.",
-      "count": 22,
+      "count": 25,
       "items": [
         {
           "id": "curis-1",
@@ -604,6 +604,39 @@ window.PORTFOLIO_DATA = {
           "size": "1.04 MB",
           "date": "2026-09-13",
           "timestamp": 1789343058000
+        },
+        {
+          "id": "curis-23",
+          "title": "Comanmierda",
+          "filename": "comanmierda.png",
+          "src": "curis/comanmierda.png",
+          "type": "curis",
+          "mediaType": "image",
+          "size": "0.02 MB",
+          "date": "2026-11-16",
+          "timestamp": 1794861393000
+        },
+        {
+          "id": "curis-24",
+          "title": "Ay-aru-ay",
+          "filename": "ay-aru-ay.png",
+          "src": "curis/ay-aru-ay.png",
+          "type": "curis",
+          "mediaType": "image",
+          "size": "0.01 MB",
+          "date": "2026-11-16",
+          "timestamp": 1794860379000
+        },
+        {
+          "id": "curis-25",
+          "title": "Kiyoshismoke",
+          "filename": "kiyoshismoke.png",
+          "src": "curis/kiyoshismoke.png",
+          "type": "curis",
+          "mediaType": "image",
+          "size": "3.49 MB",
+          "date": "2026-11-16",
+          "timestamp": 1794859078000
         }
       ]
     },
@@ -611,7 +644,7 @@ window.PORTFOLIO_DATA = {
       "id": "edits",
       "title": "03 / EDITS",
       "subtitle": "Montajes de video, clips con ritmo sincrónico y postproducción.",
-      "count": 26,
+      "count": 27,
       "items": [
         {
           "id": "edits-1",
@@ -898,6 +931,17 @@ window.PORTFOLIO_DATA = {
           "size": "3.78 MB",
           "date": "2026-09-23",
           "timestamp": 1790181757328.6055
+        },
+        {
+          "id": "edits-27",
+          "title": "Mipapiweeeeee",
+          "filename": "mipapiweeeeee.mp4",
+          "src": "edits/mipapiweeeeee.mp4",
+          "type": "edits",
+          "mediaType": "video",
+          "size": "6.56 MB",
+          "date": "2026-11-16",
+          "timestamp": 1794866372000
         }
       ]
     }
