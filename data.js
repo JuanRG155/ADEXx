@@ -372,7 +372,7 @@ window.PORTFOLIO_DATA = {
       "id": "curis",
       "title": "02 / CURIS",
       "subtitle": "Ilustraciones, curis, memes visuales y experimentos.",
-      "count": 25,
+      "count": 29,
       "items": [
         {
           "id": "curis-1",
@@ -648,6 +648,50 @@ window.PORTFOLIO_DATA = {
           "size": "3.49 MB",
           "date": "2026-11-16",
           "timestamp": 1794859078000
+        },
+        {
+          "id": "curis-26",
+          "title": "Electrovictoria",
+          "filename": "electrovictoria.jpg",
+          "src": "curis/electrovictoria.jpg",
+          "type": "curis",
+          "mediaType": "image",
+          "size": "0.13 MB",
+          "date": "2026-11-18",
+          "timestamp": 1795053980003
+        },
+        {
+          "id": "curis-27",
+          "title": "ValeryXD",
+          "filename": "valeryXD.jpg",
+          "src": "curis/valeryXD.jpg",
+          "type": "curis",
+          "mediaType": "image",
+          "size": "0.10 MB",
+          "date": "2026-11-18",
+          "timestamp": 1795053980002
+        },
+        {
+          "id": "curis-28",
+          "title": "Vicotiriasincerebro",
+          "filename": "vicotiriasincerebro.jpg",
+          "src": "curis/vicotiriasincerebro.jpg",
+          "type": "curis",
+          "mediaType": "image",
+          "size": "0.46 MB",
+          "date": "2026-11-18",
+          "timestamp": 1795053980001
+        },
+        {
+          "id": "curis-29",
+          "title": "Vidkiyoshi",
+          "filename": "vidkiyoshi.jpg",
+          "src": "curis/vidkiyoshi.jpg",
+          "type": "curis",
+          "mediaType": "image",
+          "size": "0.15 MB",
+          "date": "2026-11-18",
+          "timestamp": 1795053980000
         }
       ]
     },
